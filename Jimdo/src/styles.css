@@ -1,0 +1,29 @@
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.margin-auto {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.logo {
+  width: 103px;
+  height: 38px;
+}
+
+.header-height {
+  height: 90px;
+}
+
+.logo-div {
+  height: 90px;
+  width: 220px;
+}
+.header-first-div {
+  width: 740px;
+}
