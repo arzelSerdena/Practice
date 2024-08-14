@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     colors: {
       transparent: "transparent",
-      current: "currentColor",
-      "br-blue": "#003CBA",
+      "gray-text": "#6d6d6d",
+      "br-blue": "#004ced",
       "lt-blue": "#001453",
       bodyWhiteDarker: "#F8F8F8",
-      metal: "#565584",
-      tahiti: "#3ab7bf",
+      "white-text": "#FFFFFF",
+      "gray-border": "#d5d5d5",
       silver: "#ecebff",
       "bubble-gum": "#ff77e9",
       bermuda: "#78dcca",

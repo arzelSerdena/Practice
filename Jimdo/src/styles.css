@@ -1,16 +1,26 @@
+* {
+  font-family: "Euclid Circular A", sans-serif;
+}
+
 h1 {
   font-size: 48px;
+  line-height: 125%;
 }
 
-p {
+li {
   font-size: 20px;
+  line-height: 140%;
 }
 
-.margin-auto {
-  max-width: 1600px;
-  margin: auto;
+h2 {
+  font-size: 32px;
+  line-height: 125%;
 }
 
+.nav-font-size {
+  font-size: 16px;
+  line-height: 20px;
+}
 .logo {
   width: 103px;
   height: 38px;
@@ -26,4 +36,33 @@ p {
 }
 .header-first-div {
   width: 740px;
+}
+
+.header-space {
+  width: 136px;
+}
+
+.text-container {
+  width: 610px;
+}
+
+.img-container {
+  width: 740px;
+}
+
+.img-container2 {
+  width: 480px;
+}
+
+.start-now-btn {
+  width: 380px;
+}
+
+.h1-fourth-container {
+  width: 1000px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
 }
