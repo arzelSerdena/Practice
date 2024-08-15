@@ -4,17 +4,19 @@ module.exports = {
   theme: {
     colors: {
       transparent: "transparent",
-      "gray-text": "#6d6d6d",
-      "br-blue": "#004ced",
-      "lt-blue": "#001453",
-      bodyWhiteDarker: "#F8F8F8",
-      "white-text": "#FFFFFF",
+      "dark-blue": "#001453",
+      "bright-blue": "#004ced",
+      "dark-white": "#f8f8f8",
+      white: "#FFFFFF",
       "gray-border": "#d5d5d5",
-      silver: "#ecebff",
-      "bubble-gum": "#ff77e9",
-      bermuda: "#78dcca",
+      "gray-text": "#6d6d6d",
+      "faq-border": "#e6e6e6",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Euclid Circular A", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
