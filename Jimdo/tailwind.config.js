@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         sans: ["Euclid Circular A", "sans-serif"],
       },
+      boxShadow: {
+        "custom-shadow": "0 2px 12px 0 rgba(0, 0, 0, 0.06)",
+      },
     },
   },
   plugins: [],
