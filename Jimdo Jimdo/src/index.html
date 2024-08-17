@@ -382,19 +382,27 @@
               class="border-b-2 border-t-2 border-gray-border border-solid mb-10"
             >
               <ol class="my-10">
-                <li class="text-sm ml-7 mb-5">
+                <li
+                  class="text-sm ml-7 mb-5 min-[768px]:text-base before:content-['1.'] before:absolute before:ml-[-28px] before:font-medium before:text-bright-blue"
+                >
                   Sign up or log in with social media. You’ll also be able to
                   choose a domain (website address) for your portfolio site.
                 </li>
-                <li class="text-sm ml-7 mb-5">
+                <li
+                  class="text-sm ml-7 mb-5 min-[768px]:text-base before:content-['2.'] before:absolute before:ml-[-28px] before:font-medium before:text-bright-blue"
+                >
                   Tell us a little about your work. Answer a few questions and
                   our portfolio maker creates the website for you.
                 </li>
-                <li class="text-sm ml-7 mb-5">
+                <li
+                  class="text-sm ml-7 mb-5 min-[768px]:text-base before:content-['3.'] before:absolute before:ml-[-28px] before:font-medium before:text-bright-blue"
+                >
                   Add your images. Connect your social media accounts to pull in
                   your images from around the web, or easily upload them.
                 </li>
-                <li class="text-sm ml-7 mb-5">
+                <li
+                  class="text-sm ml-7 mb-5 min-[768px]:text-base before:content-['4.'] before:absolute before:ml-[-28px] before:font-medium before:text-bright-blue"
+                >
                   Publish your site—and you’re online! Then follow our quick and
                   easy tips to optimize your portfolio site even more!
                 </li>
@@ -402,7 +410,7 @@
             </div>
             <div class="flex justify-center">
               <button
-                class="bg-bright-blue w-[250px] p-3 border-2 border-solid border-bright-blue rounded"
+                class="bg-bright-blue w-[250px] p-3 border-2 border-solid border-bright-blue rounded min-[768px]:py-4 min-[768px]:px-5"
               >
                 <p class="text-white text-sm">Start Now</p>
               </button>
@@ -647,6 +655,7 @@
               <ul>
                 <li>
                   <button
+                    id="toggleFAQ"
                     class="border-b border-solid border-faq-border flex items-center justify-between mb-4 w-full min-[992px]:mb-7"
                   >
                     <h3
@@ -669,8 +678,11 @@
                       </svg>
                     </span>
                   </button>
-                  <div>
-                    <p class="hidden">
+                  <div
+                    id="showFAQ"
+                    class="hidden transition-transform duration-75 ease-in-out"
+                  >
+                    <p>
                       Creating an online portfolio is one of the best ways to
                       show off your best work, all in one place. Even if you’re
                       already using different social media accounts, putting
@@ -681,7 +693,31 @@
                       customize your design exactly how you want it.
                     </p>
                   </div>
+
+                  <script>
+                    document
+                      .getElementById("toggleFAQ")
+                      .addEventListener("click", function () {
+                        const hiddenDiv = document.getElementById("showFAQ");
+                        if (hiddenDiv.classList.contains("hidden")) {
+                          hiddenDiv.classList.remove("hidden");
+                          hiddenDiv.classList.add(
+                            "transition-transform, duration-75, ease-in-out"
+                          );
+                        } else {
+                          hiddenDiv.classList.add("hidden");
+                          hiddenDiv.classList.remove(
+                            "transition-transform, duration-75, ease-in-out"
+                          );
+
+                          setTimeout(() => {
+                            div.classList.add("hidden");
+                          }, 500); // Match the duration of the transition
+                        }
+                      });
+                  </script>
                 </li>
+
                 <li>
                   <button
                     class="border-b border-solid border-faq-border flex items-center justify-between mb-4 w-full min-[992px]:mb-7"
@@ -976,312 +1012,372 @@
 
       <!--footer-->
       <footer>
-        <div
-          class="grid grid-cols-6 gap-x-5 px-5 min-[576px]:px-10 min-[576px]:gap-x-10"
-        >
-          <!---social media-->
-          <div class="order-4 flex flex-col items-center col-span-6">
-            <!----logo-->
-            <div class="py-5">
-              <a href="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 100 37"
-                  width="118"
-                  height="48"
-                >
-                  <path
-                    fill="#010334"
-                    d="M82.37 9.905a8.58 8.58 0 00-8.579 8.58 8.58 8.58 0 008.58 8.58 8.58 8.58 0 008.58-8.58 8.58 8.58 0 00-8.58-8.58zm0 13.393a4.813 4.813 0 110-9.625 4.813 4.813 0 010 9.625zM35.137 10.23h3.608l5.469 10.267 5.444-10.267h3.633v16.513h-4.057V17.92l-4.618 8.823h-.803l-4.618-8.8v8.8h-4.057V10.23h-.001zm-12.252.057h-4.072v9.86a2.847 2.847 0 01-5.693 0H9.048a6.919 6.919 0 1013.837 0v-9.86zm40.54-.057h-6.1v16.513h6.1a8.256 8.256 0 100-16.513zm-.495 13.068h-1.546v-9.625h1.546a4.812 4.812 0 110 9.625zM31.04 10.287h-4.086v16.4h4.086v-16.4z"
-                  ></path>
-                  <path
-                    fill="#010334"
-                    d="M97.537 2.463V34.51H2.463V2.463h95.074zM100 0H0v36.973h100V0z"
-                  ></path>
-                </svg>
-              </a>
+        <div class="max-w-[1600px] m-auto">
+          <div
+            class="grid grid-cols-6 gap-x-5 gap-y-0 px-10 min-[576px]:px-10 min-[576px]:gap-x-10 min-[992px]:grid-cols-12 min-[992px]:gap-y-10 min-[992px]:p-10"
+          >
+            <!---social media-->
+            <div
+              class="order-4 flex flex-col max-[991px]:items-center col-span-6 min-[992px]:order-1 min-[992px]:mb-10 min-[1200px]:col-span-4"
+            >
+              <!----logo-->
+              <div class="py-5 min-[992px]:p-0 min-[992px]:mb-10">
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 100 37"
+                    width="118"
+                    height="48"
+                  >
+                    <path
+                      fill="#010334"
+                      d="M82.37 9.905a8.58 8.58 0 00-8.579 8.58 8.58 8.58 0 008.58 8.58 8.58 8.58 0 008.58-8.58 8.58 8.58 0 00-8.58-8.58zm0 13.393a4.813 4.813 0 110-9.625 4.813 4.813 0 010 9.625zM35.137 10.23h3.608l5.469 10.267 5.444-10.267h3.633v16.513h-4.057V17.92l-4.618 8.823h-.803l-4.618-8.8v8.8h-4.057V10.23h-.001zm-12.252.057h-4.072v9.86a2.847 2.847 0 01-5.693 0H9.048a6.919 6.919 0 1013.837 0v-9.86zm40.54-.057h-6.1v16.513h6.1a8.256 8.256 0 100-16.513zm-.495 13.068h-1.546v-9.625h1.546a4.812 4.812 0 110 9.625zM31.04 10.287h-4.086v16.4h4.086v-16.4z"
+                    ></path>
+                    <path
+                      fill="#010334"
+                      d="M97.537 2.463V34.51H2.463V2.463h95.074zM100 0H0v36.973h100V0z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <!----social media icons-->
+              <div>
+                <ul class="flex py-5 min-[992px]:p-0 min-[992px]:mb-5">
+                  <!----facebook-->
+                  <li class="p-3 min-[992px]:pl-0">
+                    <a href="">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M24 0C10.745 0 0 10.81 0 24.147 0 36.199 8.776 46.189 20.25 48V31.127h-6.094v-6.98h6.094v-5.32c0-6.052 3.583-9.395 9.065-9.395 2.626 0 5.372.472 5.372.472v5.942h-3.026c-2.981 0-3.911 1.862-3.911 3.771v4.53h6.656l-1.064 6.98H27.75V48C39.224 46.189 48 36.199 48 24.147 48 10.81 37.255 0 24 0z"
+                          fill="#001453"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!----instagram-->
+                  <li class="p-3">
+                    <a href="">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs>
+                          <path
+                            id="instagram_svg__a"
+                            d="M0 .015h47.8V47.81H0z"
+                          ></path>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd">
+                          <mask id="instagram_svg__b" fill="#fff">
+                            <use xlink:href="#instagram_svg__a"></use>
+                          </mask>
+                          <path
+                            d="M23.955 2.372c-5.862 0-6.597.025-8.899.13-2.297.104-3.866.47-5.239 1.003a10.568 10.568 0 00-3.823 2.49c-1.2 1.2-1.938 2.403-2.49 3.822-.533 1.373-.898 2.942-1.002 5.24-.105 2.301-.13 3.036-.13 8.898 0 5.861.025 6.596.13 8.898.104 2.298.47 3.867 1.003 5.24a10.573 10.573 0 002.49 3.822c1.2 1.2 2.403 1.938 3.822 2.49 1.373.533 2.942.898 5.24 1.003 2.301.105 3.036.13 8.898.13 5.861 0 6.596-.025 8.898-.13 2.298-.105 3.867-.47 5.24-1.003 1.419-.552 2.622-1.29 3.822-2.49 1.2-1.2 1.938-2.403 2.49-3.822.533-1.373.898-2.942 1.003-5.24.105-2.302.13-3.037.13-8.898 0-5.862-.025-6.597-.13-8.899-.105-2.297-.47-3.866-1.003-5.239-.552-1.42-1.29-2.623-2.49-3.823-1.2-1.2-2.403-1.938-3.822-2.49-1.373-.533-2.942-.898-5.24-1.002-2.302-.105-3.037-.13-8.898-.13zm0 3.889c5.763 0 6.445.022 8.721.125 2.105.096 3.247.448 4.008.744 1.007.391 1.726.859 2.482 1.614.755.755 1.223 1.474 1.614 2.482.296.76.647 1.903.743 4.007.104 2.276.126 2.959.126 8.722s-.022 6.445-.126 8.721c-.096 2.105-.447 3.247-.743 4.008-.391 1.007-.86 1.726-1.614 2.482-.756.755-1.475 1.223-2.482 1.614-.76.296-1.903.647-4.008.743-2.275.104-2.958.126-8.721.126-5.764 0-6.446-.022-8.722-.126-2.104-.096-3.247-.447-4.007-.743-1.008-.391-1.727-.86-2.482-1.614-.755-.756-1.223-1.475-1.614-2.482-.296-.76-.648-1.903-.744-4.008-.103-2.276-.125-2.958-.125-8.721s.022-6.446.125-8.722c.096-2.104.448-3.247.744-4.007.391-1.008.859-1.727 1.614-2.482.755-.755 1.474-1.223 2.482-1.614.76-.296 1.903-.648 4.007-.744 2.276-.103 2.959-.125 8.722-.125z"
+                            fill="#001453"
+                            mask="url(#instagram_svg__b)"
+                          ></path>
+                          <path
+                            d="M23.9 31.882a7.967 7.967 0 110-15.934 7.967 7.967 0 010 15.934zm-12.273-7.967c0 6.778 5.495 12.273 12.273 12.273s12.273-5.495 12.273-12.273S30.678 11.642 23.9 11.642s-12.273 5.495-12.273 12.273zm27.899-12.758a2.868 2.868 0 11-5.736 0 2.868 2.868 0 015.736 0"
+                            fill="#001453"
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-----pinterest-->
+                  <li class="p-3">
+                    <a href="">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.99 0C10.722 0 0 10.741 0 23.99c0 10.17 6.318 18.857 15.243 22.351-.217-1.895-.395-4.817.08-6.89.433-1.876 2.803-11.927 2.803-11.927s-.71-1.44-.71-3.554c0-3.337 1.934-5.824 4.343-5.824 2.053 0 3.04 1.54 3.04 3.376 0 2.053-1.302 5.134-1.994 7.997-.572 2.389 1.205 4.344 3.555 4.344 4.264 0 7.542-4.502 7.542-10.979 0-5.745-4.127-9.754-10.03-9.754-6.832 0-10.84 5.114-10.84 10.406 0 2.053.79 4.265 1.777 5.47a.714.714 0 01.158.69c-.178.75-.593 2.39-.672 2.725-.098.435-.355.533-.81.316-2.96-1.421-4.817-5.805-4.817-9.32 0-7.562 5.49-14.512 15.855-14.512 8.313 0 14.79 5.923 14.79 13.86 0 8.274-5.213 14.928-12.44 14.928-2.429 0-4.72-1.264-5.49-2.764l-1.5 5.706c-.533 2.093-1.994 4.7-2.981 6.299 2.25.69 4.62 1.066 7.108 1.066C37.259 48 48 37.259 48 24.01 47.98 10.74 37.239 0 23.99 0z"
+                          fill="#001453"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-------twitter-->
+                  <li class="p-3">
+                    <a href="">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.76 0c13.122 0 23.76 10.638 23.76 23.76 0 13.122-10.638 23.76-23.76 23.76C10.638 47.52 0 36.882 0 23.76 0 10.638 10.638 0 23.76 0zm6.213 13.603a5.73 5.73 0 00-5.726 5.726c0 .451.048.89.155 1.307-4.764-.238-8.982-2.519-11.81-5.988a5.747 5.747 0 00-.771 2.875 5.703 5.703 0 002.554 4.764 5.627 5.627 0 01-2.59-.713v.071a5.735 5.735 0 004.598 5.62 5.71 5.71 0 01-1.51.202 5.47 5.47 0 01-1.08-.107 5.72 5.72 0 005.346 3.98 11.515 11.515 0 01-8.483 2.364 15.96 15.96 0 008.756 2.59c10.537 0 16.3-8.732 16.3-16.3 0-.25 0-.499-.013-.737a11.736 11.736 0 002.863-2.97c-1.021.452-2.126.76-3.29.903a5.725 5.725 0 002.518-3.172 11.6 11.6 0 01-3.635 1.39 5.7 5.7 0 00-4.182-1.805z"
+                          fill="#001453"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-----youtube-->
+                  <li class="p-3">
+                    <a href="">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs>
+                          <path
+                            id="youtube_svg__a"
+                            d="M0 0h47.91v33.537H0z"
+                          ></path>
+                        </defs>
+                        <g
+                          transform="translate(0 7)"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <mask id="youtube_svg__b" fill="#fff">
+                            <use xlink:href="#youtube_svg__a"></use>
+                          </mask>
+                          <path
+                            d="M19.164 23.955V9.582l12.447 7.186-12.447 7.187zM46.909 5.237A6.001 6.001 0 0042.673 1c-3.736-1-18.718-1-18.718-1S8.973 0 5.237 1A6 6 0 001 5.237C0 8.973 0 16.768 0 16.768S0 24.564 1.001 28.3a6 6 0 004.236 4.236c3.736 1 18.718 1 18.718 1s14.982 0 18.718-1a6.001 6.001 0 004.236-4.236c1-3.736 1-11.532 1-11.532s0-7.795-1-11.531z"
+                            fill="#001453"
+                            mask="url(#youtube_svg__b)"
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <!----social media icons-->
-            <div>
-              <ul class="flex py-5">
-                <!----facebook-->
-                <li class="p-3">
-                  <a href="">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 48 48"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 0C10.745 0 0 10.81 0 24.147 0 36.199 8.776 46.189 20.25 48V31.127h-6.094v-6.98h6.094v-5.32c0-6.052 3.583-9.395 9.065-9.395 2.626 0 5.372.472 5.372.472v5.942h-3.026c-2.981 0-3.911 1.862-3.911 3.771v4.53h6.656l-1.064 6.98H27.75V48C39.224 46.189 48 36.199 48 24.147 48 10.81 37.255 0 24 0z"
-                        fill="#001453"
-                        fill-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
+            <!----products-->
+            <div
+              class="col-span-6 order-1 w-full pt-5 min-[992px]:order-2 min-[992px]:col-span-2 min-[992px]:pt-0"
+            >
+              <button
+                class="flex items-center justify-between w-full mb-4 min-[992px]:mb-2"
+              >
+                <h3
+                  class="py-3 font-medium min-[992px]:py-0 min-[992px]:text-gray-text min-[992px]:font-bold"
+                >
+                  Products
+                </h3>
+                <span class="pl-3 min-[992px]:hidden">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="hidden min-[992px]:flex min-[992px]:flex-col">
+                <a href="" class="text-dark-blue font-medium mb-2">Website</a>
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >Online Store</a
+                >
+                <a href="" class="text-dark-blue font-medium mb-2">Domain</a>
+                <a href="" class="text-dark-blue font-medium mb-2">Logo</a>
+              </div>
+            </div>
 
-                <!----instagram-->
-                <li class="p-3">
-                  <a href="">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 48 48"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                    >
-                      <defs>
-                        <path
-                          id="instagram_svg__a"
-                          d="M0 .015h47.8V47.81H0z"
-                        ></path>
-                      </defs>
-                      <g fill="none" fill-rule="evenodd">
-                        <mask id="instagram_svg__b" fill="#fff">
-                          <use xlink:href="#instagram_svg__a"></use>
-                        </mask>
-                        <path
-                          d="M23.955 2.372c-5.862 0-6.597.025-8.899.13-2.297.104-3.866.47-5.239 1.003a10.568 10.568 0 00-3.823 2.49c-1.2 1.2-1.938 2.403-2.49 3.822-.533 1.373-.898 2.942-1.002 5.24-.105 2.301-.13 3.036-.13 8.898 0 5.861.025 6.596.13 8.898.104 2.298.47 3.867 1.003 5.24a10.573 10.573 0 002.49 3.822c1.2 1.2 2.403 1.938 3.822 2.49 1.373.533 2.942.898 5.24 1.003 2.301.105 3.036.13 8.898.13 5.861 0 6.596-.025 8.898-.13 2.298-.105 3.867-.47 5.24-1.003 1.419-.552 2.622-1.29 3.822-2.49 1.2-1.2 1.938-2.403 2.49-3.822.533-1.373.898-2.942 1.003-5.24.105-2.302.13-3.037.13-8.898 0-5.862-.025-6.597-.13-8.899-.105-2.297-.47-3.866-1.003-5.239-.552-1.42-1.29-2.623-2.49-3.823-1.2-1.2-2.403-1.938-3.822-2.49-1.373-.533-2.942-.898-5.24-1.002-2.302-.105-3.037-.13-8.898-.13zm0 3.889c5.763 0 6.445.022 8.721.125 2.105.096 3.247.448 4.008.744 1.007.391 1.726.859 2.482 1.614.755.755 1.223 1.474 1.614 2.482.296.76.647 1.903.743 4.007.104 2.276.126 2.959.126 8.722s-.022 6.445-.126 8.721c-.096 2.105-.447 3.247-.743 4.008-.391 1.007-.86 1.726-1.614 2.482-.756.755-1.475 1.223-2.482 1.614-.76.296-1.903.647-4.008.743-2.275.104-2.958.126-8.721.126-5.764 0-6.446-.022-8.722-.126-2.104-.096-3.247-.447-4.007-.743-1.008-.391-1.727-.86-2.482-1.614-.755-.756-1.223-1.475-1.614-2.482-.296-.76-.648-1.903-.744-4.008-.103-2.276-.125-2.958-.125-8.721s.022-6.446.125-8.722c.096-2.104.448-3.247.744-4.007.391-1.008.859-1.727 1.614-2.482.755-.755 1.474-1.223 2.482-1.614.76-.296 1.903-.648 4.007-.744 2.276-.103 2.959-.125 8.722-.125z"
-                          fill="#001453"
-                          mask="url(#instagram_svg__b)"
-                        ></path>
-                        <path
-                          d="M23.9 31.882a7.967 7.967 0 110-15.934 7.967 7.967 0 010 15.934zm-12.273-7.967c0 6.778 5.495 12.273 12.273 12.273s12.273-5.495 12.273-12.273S30.678 11.642 23.9 11.642s-12.273 5.495-12.273 12.273zm27.899-12.758a2.868 2.868 0 11-5.736 0 2.868 2.868 0 015.736 0"
-                          fill="#001453"
-                        ></path>
-                      </g>
-                    </svg>
-                  </a>
-                </li>
+            <!---about us-->
+            <div
+              class="col-span-6 order-2 w-full min-[992px]:order-3 min-[992px]:row-start-1 min-[992px]:col-start-9 min-[992px]:col-span-2 min-[1200px]:col-start-7"
+            >
+              <button
+                class="flex items-center justify-between w-full mb-4 min-[992px]:mb-2"
+              >
+                <h3
+                  class="py-3 font-medium min-[992px]:py-0 min-[992px]:text-gray-text min-[992px]:font-bold"
+                >
+                  About us
+                </h3>
+                <span class="pl-3 min-[992px]:hidden">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="hidden min-[992px]:flex min-[992px]:flex-col">
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >About Jimdo</a
+                >
+                <a href="" class="text-dark-blue font-medium mb-2">Careers</a>
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >Affiliates</a
+                >
+              </div>
+            </div>
 
-                <!-----pinterest-->
-                <li class="p-3">
-                  <a href="">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 48 48"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M23.99 0C10.722 0 0 10.741 0 23.99c0 10.17 6.318 18.857 15.243 22.351-.217-1.895-.395-4.817.08-6.89.433-1.876 2.803-11.927 2.803-11.927s-.71-1.44-.71-3.554c0-3.337 1.934-5.824 4.343-5.824 2.053 0 3.04 1.54 3.04 3.376 0 2.053-1.302 5.134-1.994 7.997-.572 2.389 1.205 4.344 3.555 4.344 4.264 0 7.542-4.502 7.542-10.979 0-5.745-4.127-9.754-10.03-9.754-6.832 0-10.84 5.114-10.84 10.406 0 2.053.79 4.265 1.777 5.47a.714.714 0 01.158.69c-.178.75-.593 2.39-.672 2.725-.098.435-.355.533-.81.316-2.96-1.421-4.817-5.805-4.817-9.32 0-7.562 5.49-14.512 15.855-14.512 8.313 0 14.79 5.923 14.79 13.86 0 8.274-5.213 14.928-12.44 14.928-2.429 0-4.72-1.264-5.49-2.764l-1.5 5.706c-.533 2.093-1.994 4.7-2.981 6.299 2.25.69 4.62 1.066 7.108 1.066C37.259 48 48 37.259 48 24.01 47.98 10.74 37.239 0 23.99 0z"
-                        fill="#001453"
-                        fill-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
+            <!---service-->
+            <div
+              class="col-span-6 order-3 w-full pb-5 min-[992px]:order-4 min-[992px]:row-start-1 min-[992px]:col-start-11 min-[992px]:col-span-2 min-[992px]:pb-0 min-[1200px]:col-start-9"
+            >
+              <button
+                class="flex items-center justify-between w-full mb-4 min-[992px]:mb-2"
+              >
+                <h3
+                  class="py-3 font-medium min-[992px]:py-0 min-[992px]:text-gray-text min-[992px]:font-bold"
+                >
+                  Service
+                </h3>
+                <span class="pl-3 min-[992px]:hidden">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="hidden min-[992px]:flex min-[992px]:flex-col">
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >Jimdo Blog</a
+                >
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >Inspiration</a
+                >
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >Help Center</a
+                >
+                <a href="" class="text-dark-blue font-medium mb-2"
+                  >Contact Support</a
+                >
+              </div>
+            </div>
 
-                <!-------twitter-->
-                <li class="p-3">
-                  <a href="">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 48 48"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M23.76 0c13.122 0 23.76 10.638 23.76 23.76 0 13.122-10.638 23.76-23.76 23.76C10.638 47.52 0 36.882 0 23.76 0 10.638 10.638 0 23.76 0zm6.213 13.603a5.73 5.73 0 00-5.726 5.726c0 .451.048.89.155 1.307-4.764-.238-8.982-2.519-11.81-5.988a5.747 5.747 0 00-.771 2.875 5.703 5.703 0 002.554 4.764 5.627 5.627 0 01-2.59-.713v.071a5.735 5.735 0 004.598 5.62 5.71 5.71 0 01-1.51.202 5.47 5.47 0 01-1.08-.107 5.72 5.72 0 005.346 3.98 11.515 11.515 0 01-8.483 2.364 15.96 15.96 0 008.756 2.59c10.537 0 16.3-8.732 16.3-16.3 0-.25 0-.499-.013-.737a11.736 11.736 0 002.863-2.97c-1.021.452-2.126.76-3.29.903a5.725 5.725 0 002.518-3.172 11.6 11.6 0 01-3.635 1.39 5.7 5.7 0 00-4.182-1.805z"
-                        fill="#001453"
-                      ></path>
-                    </svg>
-                  </a>
+            <!--legal notice-->
+            <!-----FIXME: flex row min 768-->
+            <div
+              class="col-span-6 order-6 py-5 w-full min-[992px]:order-5 min-[992px]:py-10"
+            >
+              <ul class="flex max-[767px]:flex-col items-center">
+                <li
+                  class="py-2 px-3 min-[992px]:p-0 min-[992px]:mr-6 min-[992px]:leading-[34px]"
+                >
+                  <a
+                    href=""
+                    class="text-sm font-medium text-dark-blue min-[768px]:text-base text-nowrap"
+                    >Legal notice</a
+                  >
                 </li>
-
-                <!-----youtube-->
-                <li class="p-3">
-                  <a href="">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 48 48"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                    >
-                      <defs>
-                        <path
-                          id="youtube_svg__a"
-                          d="M0 0h47.91v33.537H0z"
-                        ></path>
-                      </defs>
-                      <g
-                        transform="translate(0 7)"
-                        fill="none"
-                        fill-rule="evenodd"
-                      >
-                        <mask id="youtube_svg__b" fill="#fff">
-                          <use xlink:href="#youtube_svg__a"></use>
-                        </mask>
-                        <path
-                          d="M19.164 23.955V9.582l12.447 7.186-12.447 7.187zM46.909 5.237A6.001 6.001 0 0042.673 1c-3.736-1-18.718-1-18.718-1S8.973 0 5.237 1A6 6 0 001 5.237C0 8.973 0 16.768 0 16.768S0 24.564 1.001 28.3a6 6 0 004.236 4.236c3.736 1 18.718 1 18.718 1s14.982 0 18.718-1a6.001 6.001 0 004.236-4.236c1-3.736 1-11.532 1-11.532s0-7.795-1-11.531z"
-                          fill="#001453"
-                          mask="url(#youtube_svg__b)"
-                        ></path>
-                      </g>
-                    </svg>
-                  </a>
+                <li
+                  class="py-2 px-3 min-[992px]:p-0 min-[992px]:mr-6 min-[992px]:leading-[34px]"
+                >
+                  <a
+                    href=""
+                    class="text-sm font-medium text-dark-blue min-[768px]:text-base text-nowrap"
+                    >Terms of Service</a
+                  >
+                </li>
+                <li
+                  class="py-2 px-3 min-[992px]:p-0 min-[992px]:mr-6 min-[992px]:leading-[34px]"
+                >
+                  <a
+                    href=""
+                    class="text-sm font-medium text-dark-blue min-[768px]:text-base text-nowrap"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li
+                  class="py-2 px-3 min-[992px]:p-0 min-[992px]:mr-6 min-[992px]:leading-[34px]"
+                >
+                  <a
+                    href=""
+                    class="text-sm font-medium min-[768px]:text-base text-nowrap"
+                    >Cookie Settings</a
+                  >
                 </li>
               </ul>
             </div>
-          </div>
 
-          <!----products-->
-          <div class="col-span-6 order-1 w-full pt-5">
-            <button class="flex items-center justify-between w-full mb-4">
-              <h3 class="py-3 font-medium">Products</h3>
-              <span class="pl-3">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </span>
-            </button>
-            <div class="hidden">
-              <a href="">Website</a>
-              <a href="">Online Store</a>
-              <a href="">Domain</a>
-              <a href="">Logo</a>
-            </div>
-          </div>
-
-          <!---about us-->
-          <div class="col-span-6 order-2 w-full">
-            <button class="flex items-center justify-between w-full mb-4">
-              <h3 class="py-3 font-medium">About us</h3>
-              <span class="pl-3">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </span>
-            </button>
-            <div class="hidden">
-              <a href="">About Jimdo</a>
-              <a href="">Careers</a>
-              <a href="">Affiliates</a>
-            </div>
-          </div>
-
-          <!---service-->
-          <div class="col-span-6 order-3 w-full pb-5">
-            <button class="flex items-center justify-between w-full mb-4">
-              <h3 class="py-3 font-medium">Service</h3>
-              <span class="pl-3">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </span>
-            </button>
-            <div class="hidden">
-              <a href="">Jimdo Blog</a>
-              <a href="">Inspiration</a>
-              <a href="">Help Center</a>
-              <a href="">Contact Support</a>
-            </div>
-          </div>
-
-          <!--legal notice-->
-          <!-----FIXME: flex row min 768-->
-          <div class="col-span-6 order-6 py-5 w-full">
-            <ul class="flex flex-col items-center">
-              <li class="py-2 px-3">
-                <a
-                  href=""
-                  class="text-sm font-medium text-dark-blue min-[768px]:text-base text-nowrap"
-                  >Legal notice</a
-                >
-              </li>
-              <li class="py-2 px-3">
-                <a
-                  href=""
-                  class="text-sm font-medium text-dark-blue min-[768px]:text-base text-nowrap"
-                  >Terms of Service</a
-                >
-              </li>
-              <li class="py-2 px-3">
-                <a
-                  href=""
-                  class="text-sm font-medium text-dark-blue min-[768px]:text-base text-nowrap"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="py-2 px-3">
-                <a
-                  href=""
-                  class="text-sm text-dark-blue min-[768px]:text-base text-nowrap"
-                  >Cookie Settings</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!---language-->
-          <div class="col-span-6 order-5 w-full py-5">
-            <button class="flex items-center w-full justify-center">
-              <div class="flex relative">
-                <img
-                  src="/images/uk_flag.png"
-                  alt=""
-                  class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
-                />
-                <img
-                  src="/images/usa_flag.png"
-                  alt=""
-                  class="w-[28px] h-[28px] object-right-top rounded-full absolute left-6 border-2 border-bright-blue"
-                />
-              </div>
-              <p class="py-2 pr-9 pl-10 font-medium text-dark-blue">English</p>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <!---language-->
+            <div
+              class="col-span-6 order-5 w-full py-5 min-[992px]:order-6 min-[992px]:w-max min-[992px]:justify-self-end min-[992px]:p-0 min-[992px]:h-max min-[992px]:place-self-center"
+            >
+              <button
+                class="flex items-center w-full justify-center min-[992px]:p-3"
               >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
+                <div class="flex relative">
+                  <img
+                    src="/images/uk_flag.png"
+                    alt=""
+                    class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                  />
+                  <img
+                    src="/images/usa_flag.png"
+                    alt=""
+                    class="w-[28px] h-[28px] object-right-top rounded-full absolute left-6 border-2 border-bright-blue"
+                  />
+                </div>
+                <p
+                  class="py-2 pr-9 pl-10 font-medium text-dark-blue min-[992px]:pl-9 min-[992px]:pr-4"
+                >
+                  English
+                </p>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </footer>
