@@ -19,9 +19,9 @@
 
   <!----TODO: screens 576 768 992 1200-->
   <body>
-    <nav class="fixed top-0 left-0 right-0">
+    <nav class="fixed top-0 left-0 right-0 z-5000">
       <div
-        class="max-[991px]:flex max-[991px]:justify-between max-[991px]:items-center max-[991px]:p-5 max-[991px]:bg-white max-[991px]:h-[68px] min-[768px]:h-[90px] max-[991px]:shadow-custom-shadow max-[991px]:z-20"
+        class="max-[991px]:flex max-[991px]:justify-between max-[991px]:items-center max-[991px]:p-5 max-[991px]:bg-white max-[991px]:h-[68px] min-[768px]:h-[90px] max-[991px]:shadow-custom-shadow max-[991px]:z-1000"
       >
         <!-----hamburger-->
         <div class="hamburger fixed right-[20px z-2000]">
@@ -1180,7 +1180,7 @@
         </div>
       </div> -->
 
-      <div class="slider-container">
+      <!-- <div class="slider-container">
         <div class="slider">
           <div class="slide">
             <img src="/images/website-1.webp" alt="Image 1" />
@@ -1212,6 +1212,33 @@
           <span class="indicator"></span>
           <span class="indicator"></span>
           <span class="indicator"></span>
+        </div>
+      </div> -->
+      <div class="carousel-slider flex justify-center w-screen z-10">
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <ul class="carousel">
+            <li class="card">
+              <img src="/images/website-1.webp" alt="img" />
+            </li>
+            <li class="card">
+              <img src="/images/website-11.webp" alt="img" />
+            </li>
+            <li class="card">
+              <img src="/images/website-12.webp" alt="img" />
+            </li>
+            <li class="card">
+              <img src="/images/dummy-website-4.webp" alt="img" />
+            </li>
+            <li class="card">
+              <img src="/images/website-13.webp" alt="img" />
+            </li>
+            <li class="card">
+              <img src="/images/website-14.webp" alt="img" />
+            </li>
+          </ul>
+          <div class="indicators"></div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
       </div>
 
