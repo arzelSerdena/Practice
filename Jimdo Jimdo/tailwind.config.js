@@ -11,6 +11,7 @@ module.exports = {
       "gray-border": "#d5d5d5",
       "gray-text": "#6d6d6d",
       "faq-border": "#e6e6e6",
+      black: "#000000",
     },
     extend: {
       fontFamily: {

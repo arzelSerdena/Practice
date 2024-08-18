@@ -12,193 +12,690 @@
     <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="stylesheet" href="owl.carousel.min.css" />
   </head>
 
-  <!----TODO: apply flex grow shrink to the start-->
   <!----TODO: screens 576 768 992 1200-->
   <body>
-    <nav class="fixed z-1000 inset-0">
-      <div>
-        <!-----logo-->
-        <div class="col-span-2">
-          <a href="">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 100 37"
-              width="103"
-              height="38"
-            >
-              <path
-                fill="#010334"
-                d="M82.37 9.905a8.58 8.58 0 00-8.579 8.58 8.58 8.58 0 008.58 8.58 8.58 8.58 0 008.58-8.58 8.58 8.58 0 00-8.58-8.58zm0 13.393a4.813 4.813 0 110-9.625 4.813 4.813 0 010 9.625zM35.137 10.23h3.608l5.469 10.267 5.444-10.267h3.633v16.513h-4.057V17.92l-4.618 8.823h-.803l-4.618-8.8v8.8h-4.057V10.23h-.001zm-12.252.057h-4.072v9.86a2.847 2.847 0 01-5.693 0H9.048a6.919 6.919 0 1013.837 0v-9.86zm40.54-.057h-6.1v16.513h6.1a8.256 8.256 0 100-16.513zm-.495 13.068h-1.546v-9.625h1.546a4.812 4.812 0 110 9.625zM31.04 10.287h-4.086v16.4h4.086v-16.4z"
-              ></path>
-              <path
-                fill="#010334"
-                d="M97.537 2.463V34.51H2.463V2.463h95.074zM100 0H0v36.973h100V0z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-----hamburger-->
-      <span class="material-symbols-outlined hamburger"> menu </span>
-
-      <header
-        class="h-[68px] min-[768px]:h-[90px] bg-white shadow-custom-shadow flex items-center navbar"
+    <nav class="fixed top-0 left-0 right-0">
+      <div
+        class="max-[991px]:flex max-[991px]:justify-between max-[991px]:items-center max-[991px]:p-5 max-[991px]:bg-white max-[991px]:h-[68px] min-[768px]:h-[90px] max-[991px]:shadow-custom-shadow max-[991px]:z-20"
       >
-        <div
-          class="max-[991px]:flex max-[991px]:justify-between max-w-[1600px] m-auto min-[768px]:h-[90px] min-[992px]:grid min-[992px]:grid-cols-12 min-[992px]:gap-10 min-[992px]:px-10 items-center w-full max-[991px]:mx-5"
-        >
-          <!-----logo-->
-          <div class="col-span-2">
-            <a href="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 100 37"
-                width="103"
-                height="38"
-              >
-                <path
-                  fill="#010334"
-                  d="M82.37 9.905a8.58 8.58 0 00-8.579 8.58 8.58 8.58 0 008.58 8.58 8.58 8.58 0 008.58-8.58 8.58 8.58 0 00-8.58-8.58zm0 13.393a4.813 4.813 0 110-9.625 4.813 4.813 0 010 9.625zM35.137 10.23h3.608l5.469 10.267 5.444-10.267h3.633v16.513h-4.057V17.92l-4.618 8.823h-.803l-4.618-8.8v8.8h-4.057V10.23h-.001zm-12.252.057h-4.072v9.86a2.847 2.847 0 01-5.693 0H9.048a6.919 6.919 0 1013.837 0v-9.86zm40.54-.057h-6.1v16.513h6.1a8.256 8.256 0 100-16.513zm-.495 13.068h-1.546v-9.625h1.546a4.812 4.812 0 110 9.625zM31.04 10.287h-4.086v16.4h4.086v-16.4z"
-                ></path>
-                <path
-                  fill="#010334"
-                  d="M97.537 2.463V34.51H2.463V2.463h95.074zM100 0H0v36.973h100V0z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-
-          <!--first nav group-->
-          <div
-            class="min-[992px]:flex min-[992px]:gap-12 min-[992px]:col-start-3 min-[992px]:col-end-9 navbar1"
-          >
-            <div class="py-1 px-1.5">
-              <button class="flex items-center">
-                <p class="font-medium text-dark-blue pr-1">Website</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="#001453"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div class="py-1 px-1.5">
-              <button class="flex items-center">
-                <p class="font-medium text-dark-blue pr-1">Online Store</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="#001453"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div class="py-1 px-1.5">
-              <button class="flex items-center">
-                <p class="font-medium text-dark-blue pr-1">Business-Tools</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="#001453"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <!--second nav group-->
-          <div
-            class="min-[992px]:flex min-[992px]:gap-12 min-[992px]:justify-end min-[992px]:col-span-4 min-[992px]:col-end-[-1] navbar2"
-          >
-            <div class="py-1 px-1.5">
-              <button class="flex items-center">
-                <p class="font-medium text-dark-blue pr-1">Knowledge Guide</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="#001453"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div class="py-1 px-1.5">
-              <button class="flex items-center">
-                <p class="font-medium text-dark-blue pr-1">Help</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="#001453"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div class="logInButtons">
-              <a href="" class="py-1 w-full min-[992px]:hidden mb-1"
-                ><div
-                  class="border-2 border-solid border-dark-blue bg-dark-blue rounded"
-                >
-                  <p class="font-medium text-white self-center">Sign Up</p>
-                </div></a
-              >
-              <a href="" class="py-1 max-[991px]:w-full"
-                ><div
-                  class="max-[991px]:border-2 max-[991px]:border-solid max-[991px]:border-dark-blue max-[991px]:rounded"
-                >
-                  <p class="font-medium self-center">Log In</p>
-                </div></a
-              >
-            </div>
-          </div>
+        <!-----hamburger-->
+        <div class="hamburger fixed right-[20px z-2000]">
+          <div class="h-[3px] w-[25px] bg-dark-blue mb-1"></div>
+          <div class="h-[3px] w-[25px] bg-dark-blue mb-1"></div>
+          <div class="h-[3px] w-[25px] bg-dark-blue"></div>
         </div>
-      </header>
+
+        <header
+          class="h-[68px] min-[768px]:h-[90px] bg-white shadow-custom-shadow flex items-center navbar"
+        >
+          <div
+            class="max-[991px]:flex max-[991px]:justify-between max-w-[1600px] m-auto min-[768px]:h-[90px] min-[992px]:grid min-[992px]:grid-cols-12 min-[992px]:gap-10 min-[992px]:px-10 items-center w-full max-[991px]:mx-5"
+          >
+            <!-----logo-->
+            <div class="col-span-2 logo">
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 100 37"
+                  width="103"
+                  height="38"
+                >
+                  <path
+                    fill="#010334"
+                    d="M82.37 9.905a8.58 8.58 0 00-8.579 8.58 8.58 8.58 0 008.58 8.58 8.58 8.58 0 008.58-8.58 8.58 8.58 0 00-8.58-8.58zm0 13.393a4.813 4.813 0 110-9.625 4.813 4.813 0 010 9.625zM35.137 10.23h3.608l5.469 10.267 5.444-10.267h3.633v16.513h-4.057V17.92l-4.618 8.823h-.803l-4.618-8.8v8.8h-4.057V10.23h-.001zm-12.252.057h-4.072v9.86a2.847 2.847 0 01-5.693 0H9.048a6.919 6.919 0 1013.837 0v-9.86zm40.54-.057h-6.1v16.513h6.1a8.256 8.256 0 100-16.513zm-.495 13.068h-1.546v-9.625h1.546a4.812 4.812 0 110 9.625zM31.04 10.287h-4.086v16.4h4.086v-16.4z"
+                  ></path>
+                  <path
+                    fill="#010334"
+                    d="M97.537 2.463V34.51H2.463V2.463h95.074zM100 0H0v36.973h100V0z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <!------blank div-->
+            <div class="blank-div"></div>
+
+            <!--first nav group-->
+            <div
+              class="min-[992px]:flex min-[992px]:gap-12 min-[992px]:col-start-3 min-[992px]:col-end-9 navbar1"
+            >
+              <div
+                class="px-1.5 headerToggle borderDiv h-[68px] min-[768px]:h-[90px] hover:border-b-4 hover:border-bright-blue"
+              >
+                <button class="flex items-center h-[68px] min-[768px]:h-[90px]">
+                  <p class="font-medium text-dark-blue pr-1 toggleDiv">
+                    Website
+                  </p>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="#001453"
+                    ></path>
+                  </svg>
+                </button>
+
+                <div class="">
+                  <div
+                    class="bg-white flex shadow-custom-shadow ml-[-40px] absolute headerHiddenDiv"
+                  >
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        OUR WEBSITE BUILDER
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Create a website</a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Pricing and plans</a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Website examples</a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Your own domain</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        USEFUL TOOLS FOR YOUR WEBSITE
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Warning-proof legal texts
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                For privacy policy & Co
+                              </p></a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Industry entries
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                For Google, Facebook & Co.
+                              </p></a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Online booking
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Directly via your website
+                              </p></a
+                            >
+                          </li>
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Social media integration
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Promote on Facebook & Instagram
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        FOR YOUR INDUSTRY
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-3">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Online portfolio</a
+                            >
+                          </li>
+                          <li class="my-3">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Restaurant websites</a
+                            >
+                          </li>
+                          <li class="my-3">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Coaches</a
+                            >
+                          </li>
+                          <li class="my-3">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Musician & Bands</a
+                            >
+                          </li>
+                          <li class="my-3">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Real estate agents</a
+                            >
+                          </li>
+                          <li class="my-3">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Doctors and Practices</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-1.5 headerToggle borderDiv h-[68px] min-[768px]:h-[90px] hover:border-b-4 hover:border-bright-blue"
+              >
+                <button class="flex items-center h-[68px] min-[768px]:h-[90px]">
+                  <p class="font-medium text-dark-blue pr-1">Online Store</p>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="#001453"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="">
+                  <div
+                    class="bg-white flex shadow-custom-shadow ml-[-40px] absolute headerHiddenDiv"
+                  >
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        OUR ONLINE STORE BUILDER
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Create an online store</a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Pricing and Plans</a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Online store examples</a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a
+                              href=""
+                              class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >Your own domain</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        USEFUL TOOLS FOR YOUR STORE
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Warning-proof legal texts
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                For general terms and conditions, privacy policy
+                                & Co
+                              </p></a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Industry entries
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                For Google, Facebook & Co.
+                              </p></a
+                            >
+                          </li>
+
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Social media integration
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Sell on Facebook & Instagram
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-1.5 headerToggle h-[68px] min-[768px]:h-[90px] hover:border-b-4 hover:border-bright-blue"
+              >
+                <button class="flex items-center h-[68px] min-[768px]:h-[90px]">
+                  <p class="font-medium text-dark-blue pr-1">Business-Tools</p>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="#001453"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="">
+                  <div
+                    class="bg-white flex shadow-custom-shadow ml-[-40px] absolute headerHiddenDiv"
+                  >
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        A LOGO FOR YOUR BUSINESS
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Logo Generator
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Create your own free logo
+                              </p></a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Logo Examples
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Get inspired
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        MORE USEFUL TOOLS
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Industry entries
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                For Google, Facebook & Co.
+                              </p></a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Warning-proof legal texts
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                For privacy policy & Co
+                              </p></a
+                            >
+                          </li>
+
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Social media integration
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Sell on Facebook & Instagram
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--second nav group-->
+            <div
+              class="min-[992px]:flex min-[992px]:gap-12 min-[992px]:justify-end min-[992px]:col-span-4 min-[992px]:col-end-[-1] navbar2"
+            >
+              <div
+                class="px-1.5 headerToggle borderDiv h-[68px] min-[768px]:h-[90px] hover:border-b-4 hover:border-bright-blue"
+              >
+                <button class="flex items-center h-[68px] min-[768px]:h-[90px]">
+                  <p class="font-medium text-dark-blue pr-1">Knowledge Guide</p>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="#001453"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="">
+                  <div
+                    class="bg-white flex shadow-custom-shadow ml-[-40px] absolute headerHiddenDiv"
+                  >
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        EXPERTISE, TIPS AND INSPIRATION
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                All Topics
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Knowledge guide overview
+                              </p></a
+                            >
+                          </li>
+                          <li class="my-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Website Tips
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Get the most out of your website
+                              </p></a
+                            >
+                          </li>
+
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Business Knowledge
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Everything about your self-employment
+                              </p></a
+                            >
+                          </li>
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Success stories
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Inspiring stories by real Jimdo customers
+                              </p></a
+                            >
+                          </li>
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Jimdo Updates
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                What's new at Jimdo?
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-1.5 headerToggle borderDiv h-[68px] min-[768px]:h-[90px] hover:border-b-4 hover:border-bright-blue"
+              >
+                <button class="flex items-center h-[68px] min-[768px]:h-[90px]">
+                  <p class="font-medium text-dark-blue pr-1">Help</p>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
+                      fill="#001453"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="">
+                  <div
+                    class="bg-white flex shadow-custom-shadow ml-[-40px] absolute headerHiddenDiv"
+                  >
+                    <div class="pt-10 px-10 pb-16">
+                      <h3
+                        class="text-xs font-semibold opacity-[70%] text-nowrap mb-7"
+                      >
+                        OUR WEBSITE BUILDER
+                      </h3>
+                      <div>
+                        <ul>
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Help Center
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Find answers to your questions
+                              </p></a
+                            >
+                          </li>
+                          <li class="mt-5">
+                            <a href=""
+                              ><p
+                                class="font-semibold text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Contact support
+                              </p>
+                              <p
+                                class="text-sm font-medium text-dark-blue text-nowrap hover:text-bright-blue"
+                              >
+                                Our support team is here for you
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="logInButtons self-center">
+                <a href="" class="py-1 w-full min-[992px]:hidden mb-1"
+                  ><div
+                    class="border-2 border-solid border-dark-blue bg-dark-blue rounded"
+                  >
+                    <p class="font-medium text-white self-center">Sign Up</p>
+                  </div></a
+                >
+                <a href="" class="max-[991px]:py-1 max-[991px]:w-full"
+                  ><div
+                    class="max-[991px]:border-2 max-[991px]:border-solid max-[991px]:border-dark-blue max-[991px]:rounded"
+                  >
+                    <p class="font-medium self-center">Log In</p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
     </nav>
 
     <main>
@@ -651,38 +1148,70 @@
       </div>
 
       <!---carousel-->
-      <div>
-        <div>
-          <div>
-            <!---scroll arrows-->
-            <div>
-              <svg></svg>
-              <svg></svg>
+      <!-- <div class="container">
+        <div class="slider">
+          <div class="owl-carousel flex">
+            <div class="slider-card w-[600px]">
+              <div class="">
+                <img src="/images/website-1.webp" alt="" class="w-[600px]" />
+              </div>
             </div>
-
-            <!---images container-->
-            <div>
-              <img src="" alt="" />
+            <div class="slider-card w-[600px]">
+              <div class="">
+                <img src="/images/website-11.webp" alt="" />
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
+            <div class="slider-card w-[600px]">
+              <div class="">
+                <img src="/images/website-12.webp" alt="" />
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
+            <div class="slider-card w-[600px]">
+              <div class="">
+                <img src="/images/website-13.webp" alt="" />
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
+            <div class="slider-card w-[600px]">
+              <div class="">
+                <img src="/images/website-14.webp" alt="" />
+              </div>
             </div>
           </div>
+        </div>
+      </div> -->
 
-          <!---scroll bar-->
-          <div></div>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img src="/images/website-1.webp" alt="Image 1" />
+          </div>
+          <div class="slide">
+            <img src="/images/website-11.webp" alt="Image 2" />
+          </div>
+          <div class="slide">
+            <img src="/images/website-12.webp" alt="Image 3" />
+          </div>
+          <div class="slide">
+            <img src="/images/website-13.webp" alt="Image 4" />
+          </div>
+          <div class="slide">
+            <img src="/images/website-14.webp" alt="Image 5" />
+          </div>
+          <div class="slide">
+            <img src="/images/website-1.webp" alt="Image 6" />
+          </div>
+        </div>
+        <div class="arrows">
+          <div class="arrow left-arrow">&lt;</div>
+          <div class="arrow right-arrow">&gt;</div>
+        </div>
+        <div class="indicators">
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
         </div>
       </div>
 
@@ -1464,6 +1993,12 @@
         </div>
       </footer>
     </main>
+    <script src="owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
