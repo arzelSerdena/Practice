@@ -20,7 +20,12 @@ module.exports = {
         "custom-shadow": "0 2px 12px 0 rgba(0, 0, 0, 0.06)",
       },
 
-      faqTransition: {},
+      transitionProperty: {
+        "max-height": "max-height",
+      },
+      transitionDuration: {
+        1400: "1400ms",
+      },
     },
   },
   plugins: [],
