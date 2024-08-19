@@ -1,0 +1,349 @@
+.hiddenDiv {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  will-change: max-height;
+}
+
+.toggleDiv.active .hiddenDiv {
+  max-height: 300px;
+}
+
+.faq .hiddenDiv p {
+  font-size: 0.875rem;
+}
+.faq .toggleDiv.active svg {
+  transform: rotate(-135deg);
+}
+
+.headerHiddenDiv {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.headerToggle.active .headerHiddenDiv,
+.headerToggle:hover .headerHiddenDiv {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.headerToggle.active svg,
+.headerToggle:hover svg {
+  transform: rotate(180deg);
+}
+
+.headerToggle svg {
+  transition: 0.2s ease;
+}
+
+footer .toggleDiv.active svg {
+  transform: rotate(180deg);
+}
+
+.toggleDiv svg {
+  transition: 0.5s ease;
+}
+
+@media (min-width: 992px) {
+  .faq .hiddenDiv {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .faq .hiddenDiv p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  footer .hiddenDiv {
+    max-height: max-content;
+  }
+
+  nav div .hamburger {
+    display: none;
+  }
+
+  .blank-div {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar.active {
+    left: 0;
+    top: 0;
+  }
+
+  nav div .hamburger {
+    position: absolute;
+    right: 20px;
+    z-index: 102;
+  }
+
+  nav .logo {
+    position: fixed;
+    left: 20px;
+    width: 92px;
+    height: 34px;
+    top: 15px;
+    z-index: 101;
+  }
+
+  .navbar {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 75%;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    overflow: auto;
+    transition: 0.5s ease-in-out;
+    z-index: 100;
+    /* box-shadow: 50px 0px rgba(0, 0, 0, 0.3); */
+  }
+
+  .navbar .blank-div {
+    background-color: white;
+    height: 7.5rem;
+  }
+
+  .navbar div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar div div a svg {
+    margin-bottom: 5rem;
+    width: 92px;
+  }
+
+  .navbar div div button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar div div button p {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .navbar div div button svg {
+    transform: rotate(-90deg);
+  }
+
+  .navbar1 div,
+  .navbar2 div {
+    padding: 12px 0;
+  }
+
+  .navbar1 {
+    padding-bottom: 4rem;
+  }
+}
+
+/* .slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 33.33%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .arrow {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .indicator {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .indicator.active {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .current-slide {
+    transform: scale(1.2);
+    opacity: 1;
+  } */
+
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  left: 0;
+}
+
+.wrapper i:last-child {
+  right: 0;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.carousel .card .img {
+  background: #8b53ff;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
