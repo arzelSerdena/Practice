@@ -31,65 +31,10 @@ document.addEventListener("click", () => {
   });
 });
 
-// const slider = document.querySelector(".slider");
-// const slides = document.querySelectorAll(".slide");
-// const leftArrow = document.querySelector(".left-arrow");
-// const rightArrow = document.querySelector(".right-arrow");
-// const indicators = document.querySelectorAll(".indicator");
-
-// let currentIndex = 0;
-
-// function updateSliderPosition() {
-//   const offset = (-currentIndex * 100) / 3; // Adjust for 3 images visible
-//   slider.style.transform = `translateX(${offset}%)`;
-
-//   slides.forEach((slide, index) => {
-//     slide.classList.remove("current-slide");
-//     if (index === currentIndex) {
-//       slide.style.opacity = "1";
-//     } else if (
-//       index === (currentIndex - 1 + slides.length) % slides.length ||
-//       index === (currentIndex + 1) % slides.length
-//     ) {
-//       slide.style.opacity = "0.5";
-//     } else {
-//       slide.style.opacity = "0.3";
-//     }
-//   });
-
-//   slides[currentIndex].classList.add("current-slide");
-
-//   indicators.forEach((indicator, index) => {
-//     indicator.classList.toggle("active", index === currentIndex);
-//   });
-// }
-
-// function showNextSlide() {
-//   currentIndex = (currentIndex + 1) % slides.length;
-//   updateSliderPosition();
-// }
-
-// function showPreviousSlide() {
-//   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-//   updateSliderPosition();
-// }
-
-// rightArrow.addEventListener("click", showNextSlide);
-// leftArrow.addEventListener("click", showPreviousSlide);
-
-// indicators.forEach((indicator, index) => {
-//   indicator.addEventListener("click", () => {
-//     currentIndex = index;
-//     updateSliderPosition();
-//   });
-// });
-
-// updateSliderPosition();
-
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapper i");
+const arrowBtns = document.querySelectorAll(".wrapper .iconDiv");
 const carouselChildrens = [...carousel.children];
 
 let isAutoPlay = true,
@@ -160,12 +105,28 @@ const infiniteScroll = () => {
   }
 };
 
-const autoPlay = () => {
-  if (window.innerWidth < 800) return; // Return if window is smaller than 800 or isAutoPlay is false
-};
-
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+
+const indicators = document.querySelectorAll(".indicator");
+const totalImages = carouselChildrens.length;
+
+const updateIndicators = () => {
+  // Calculate the index of the centered image
+  const centeredIndex =
+    Math.round(carousel.scrollLeft / firstCardWidth) % totalImages;
+
+  // Remove the active class from all indicators
+  indicators.forEach((indicator) => indicator.classList.remove("active"));
+
+  // Add the active class to the correct indicator
+  indicators[centeredIndex].classList.add("active");
+};
+
+carousel.addEventListener("scroll", updateIndicators);
+
+// Initialize the first indicator as active
+updateIndicators();

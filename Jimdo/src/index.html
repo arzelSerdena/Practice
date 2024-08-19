@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
   </head>
 
   <!----TODO: screens 576 768 992 1200-->
@@ -1213,31 +1217,79 @@
           <span class="indicator"></span>
         </div>
       </div> -->
-      <div class="carousel-slider flex justify-center w-screen z-10">
-        <div class="wrapper">
-          <i id="left" class="fa-solid fa-angle-left"></i>
-          <ul class="carousel">
-            <li class="card">
-              <img src="/images/website-1.webp" alt="img" />
-            </li>
-            <li class="card">
-              <img src="/images/website-11.webp" alt="img" />
-            </li>
-            <li class="card">
-              <img src="/images/website-12.webp" alt="img" />
-            </li>
-            <li class="card">
-              <img src="/images/dummy-website-4.webp" alt="img" />
-            </li>
-            <li class="card">
-              <img src="/images/website-13.webp" alt="img" />
-            </li>
-            <li class="card">
-              <img src="/images/website-14.webp" alt="img" />
-            </li>
-          </ul>
-          <div class="indicators"></div>
-          <i id="right" class="fa-solid fa-angle-right"></i>
+      <div class="py-10 min-[576px]:py-16 bg-dark-white">
+        <div class="carousel-slider flex justify-center w-screen z-10">
+          <div class="wrapper">
+            <div
+              class="bg-white w-[42px] h-[42px] rounded-full absolute top-[40%] left-[2%] flex items-center justify-center shadow-custom-shadow cursor-pointer iconDiv"
+            >
+              <i
+                id="left"
+                class="fa-solid fa-angle-left text-xl hover:text-bright-blue"
+              ></i>
+            </div>
+            <ul class="carousel">
+              <li class="card">
+                <img
+                  src="/images/website-12.webp"
+                  alt="img"
+                  class="carousel-img"
+                />
+              </li>
+              <li class="card">
+                <img
+                  src="/images/dummy-website-4.webp"
+                  alt="img"
+                  class="carousel-img"
+                />
+              </li>
+              <li class="card">
+                <img
+                  src="/images/website-13.webp"
+                  alt="img"
+                  class="carousel-img"
+                />
+              </li>
+              <li class="card">
+                <img
+                  src="/images/website-14.webp"
+                  alt="img"
+                  class="carousel-img"
+                />
+              </li>
+              <li class="card">
+                <img
+                  src="/images/website-1.webp"
+                  alt="img"
+                  class="carousel-img"
+                />
+              </li>
+              <li class="card">
+                <img
+                  src="/images/website-11.webp"
+                  alt="img"
+                  class="carousel-img"
+                />
+              </li>
+            </ul>
+
+            <div
+              class="bg-white w-[42px] h-[42px] rounded-full absolute top-[40%] right-[2%] flex items-center justify-center shadow-custom-shadow cursor-pointer iconDiv"
+            >
+              <i
+                id="right"
+                class="fa-solid fa-angle-right text-xl hover:text-bright-blue"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="indicators">
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
         </div>
       </div>
 
