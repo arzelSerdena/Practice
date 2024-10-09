@@ -100,18 +100,98 @@ const jonasObject = {
 
 // Different ways in accessing the value of a key in an object
 // Dot notation
-jonas.lastName;
+jonasObject.lastName;
 // Bracket notation
-jonas["lastName"];
+jonasObject["lastName"];
 
 // Sample use of bracket notation
 const nameKey = "Name";
-jonas["first" + nameKey];
-jonas["last" + nameKey];
+jonasObject["first" + nameKey];
+jonasObject["last" + nameKey];
 
 // Sample case
 const interestedIn = prompt(
   "What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends"
 );
-console.log(jonas.interestedIn); // won't work because there is no key interestedIn in the object
-console.log(jonas[interestedIn]); // will work because interestedIn is a variable
+console.log(jonasObject.interestedIn); // won't work because there is no key interestedIn in the object
+console.log(jonasObject[interestedIn]); // will work because interestedIn is a variable
+
+// Adding new properties in the object
+// Through dot notation
+jonasObject.location = "Portugal";
+// Through bracket notation
+jonasObject["twitter"] = "@jonasschmedtman";
+
+console.log(
+  `${jonasObject.firstName} has ${jonasObject.friends.length} friends, and his best friend is called ${jonasObject.friends[0]}`
+);
+
+// Object Methods
+// Including functions in an object
+const jonas3 = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  // normal function
+  calcAge: function (birthYear) {
+    return 2037 - birthYear;
+  },
+
+  // function while accessing the value of the object that called the function
+  calcAge4: function () {
+    console.log(this); // will return the whole object
+    return 20237 - this.birthYear; // thus 'this' points to the birthYear value of 'this' object which is the object that called the function which is jonas3
+  },
+
+  // Using this to create new properties and assign values to them
+  calcAge5: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+};
+
+// accessing the function in an object
+jonas3.calcAge(); // dot notation
+jonas3["calcAge"](); // bracket notation
+
+// now age can be called
+jonas3.age;
+
+// TYPE CONVERSION
+const inputYear = "1991";
+// string to number
+Number(inputYear);
+// number to string
+String(23);
+
+// TYPE COERCION
+"I am " + 23 + " years old";
+"23" - "10" - 3; // 10
+"23" + "10" + 3; // 23103
+"23" * "2"; // 46
+"23" / "2"; // 11.5
+
+// TRUTHY AND FALSY
+// 5 falsy values: 0, '', undefined, null, NaN
+
+// STRICTLY AND LOOSELY EQUAL
+const age = "18";
+if (age === 18) console.log("You just became an adult"); // strict; false
+if (age == 18) console.log("You just became an adult"); // loose; true
+
+// === do not do type coercion
+// == do type coercion
+
+// that means
+18 === 18; // true
+18 == 18; // true
+"18" === 18; // false
+"18" == 18; // true
+18 === 19; // false
+18 == 19; // false
+
+// JavaScript Releases
