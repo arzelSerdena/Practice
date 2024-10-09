@@ -21,6 +21,9 @@
   </head>
 
   <body>
+    <div
+      class="h-full w-full bg-black absolute opacity-25 hidden overlay z-2000"
+    ></div>
     <nav class="fixed top-0 left-0 right-0 z-98 bg-white">
       <div
         class="max-[991px]:flex max-[991px]:justify-between max-[991px]:items-center max-[991px]:p-5 max-[991px]:bg-white max-[991px]:h-[68px] min-[768px]:h-[90px] max-[991px]:shadow-custom-shadow max-[991px]:z-98"
@@ -1914,8 +1917,104 @@
 
             <!---language-->
             <div
-              class="col-span-6 order-5 w-full py-5 min-[992px]:order-6 min-[992px]:w-max min-[992px]:justify-self-end min-[992px]:p-0 min-[992px]:h-max min-[992px]:place-self-center"
+              class="col-span-6 order-5 w-full py-5 min-[992px]:order-6 min-[992px]:w-max min-[992px]:justify-self-end min-[992px]:p-0 min-[992px]:h-max min-[992px]:place-self-center languageToggleDiv"
             >
+              <div
+                class="languageHiddenDiv absolute bg-white flex shadow-custom-shadow -translate-y-full"
+              >
+                <div class="p-5 flex flex-col gap-4">
+                  <!-- germany -->
+                  <div>
+                    <a href="" class="flex items-center">
+                      <img
+                        src="/images/german-flag.webp"
+                        alt=""
+                        class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                      />
+                      <p
+                        class="pl-5 font-medium text-dark-blue min-[992px]:pl-5"
+                      >
+                        Deutsch
+                      </p>
+                    </a>
+                  </div>
+                  <!-- spain -->
+                  <div>
+                    <a href="" class="flex items-center">
+                      <img
+                        src="/images/spain_flag.png"
+                        alt=""
+                        class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                      />
+                      <p
+                        class="pl-5 font-medium text-dark-blue min-[992px]:pl-5"
+                      >
+                        Español
+                      </p>
+                    </a>
+                  </div>
+                  <!-- france -->
+                  <div>
+                    <a href="" class="flex items-center">
+                      <img
+                        src="/images/france_flag.webp"
+                        alt=""
+                        class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                      />
+                      <p
+                        class="pl-5 font-medium text-dark-blue min-[992px]:pl-5"
+                      >
+                        Français
+                      </p>
+                    </a>
+                  </div>
+                  <!-- italy -->
+                  <div>
+                    <a href="" class="flex items-center">
+                      <img
+                        src="/images/italy_flag.png"
+                        alt=""
+                        class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                      />
+                      <p
+                        class="pl-5 font-medium text-dark-blue min-[992px]:pl-5"
+                      >
+                        Italiano
+                      </p>
+                    </a>
+                  </div>
+                  <!-- japan -->
+                  <div>
+                    <a href="" class="flex items-center">
+                      <img
+                        src="/images/japan_flag.webp"
+                        alt=""
+                        class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                      />
+                      <p
+                        class="pl-5 font-medium text-dark-blue min-[992px]:pl-5"
+                      >
+                        日本語
+                      </p>
+                    </a>
+                  </div>
+                  <!-- netherlands -->
+                  <div>
+                    <a href="" class="flex items-center">
+                      <img
+                        src="/images/netherlands_flag.png"
+                        alt=""
+                        class="w-[28px] h-[28px] object-cover rounded-full border-2 border-bright-blue"
+                      />
+                      <p
+                        class="pl-5 font-medium text-dark-blue min-[992px]:pl-5"
+                      >
+                        Nederlands
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
               <button
                 class="flex items-center w-full justify-center min-[992px]:p-3"
               >
@@ -1932,7 +2031,7 @@
                   />
                 </div>
                 <p
-                  class="py-2 pr-9 pl-10 font-medium text-dark-blue min-[992px]:pl-9 min-[992px]:pr-4"
+                  class="py-2 pl-10 font-medium text-dark-blue min-[992px]:pl-9"
                 >
                   English
                 </p>
@@ -1947,7 +2046,7 @@
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M15.712 9.707l-5.004 5.004a.994.994 0 01-.706.292.995.995 0 01-.707-.292L4.293 9.707a.999.999 0 111.414-1.414l4.295 4.298 4.296-4.298a.999.999 0 111.414 1.414z"
-                    fill="currentColor"
+                    fill="#001453"
                   ></path>
                 </svg>
               </button>

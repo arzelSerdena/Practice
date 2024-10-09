@@ -52,6 +52,31 @@ header {
   transition: 0.2s ease;
 }
 
+/* language div */
+.languageHiddenDiv {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.languageToggleDiv.active .languageHiddenDiv,
+.languageToggleDiv:hover .languageHiddenDiv {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.languageToggleDiv.active svg,
+.languageToggleDiv:hover svg {
+  transform: rotate(180deg);
+}
+
+.languageToggleDiv svg {
+  transition: 0.2s ease;
+}
+
+/* language div */
+
 footer .toggleDiv.active svg {
   transform: rotate(180deg);
 }
