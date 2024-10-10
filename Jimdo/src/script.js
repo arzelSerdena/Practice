@@ -75,7 +75,6 @@ document.addEventListener("click", () => {
   });
 });
 
-// Slider
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
   const btnLeft = document.querySelector(".sliderBtnLeft");
@@ -164,6 +163,7 @@ const slider = function () {
   dotContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("dots__dot")) {
       const { slide } = e.target.dataset;
+
       goToSlide(slide);
       activateDot(slide);
     }
