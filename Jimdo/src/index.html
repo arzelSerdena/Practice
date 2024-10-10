@@ -21,19 +21,22 @@
   </head>
 
   <body>
-    <div
-      class="h-full w-full bg-black absolute opacity-25 hidden overlay z-2000"
-    ></div>
-    <nav class="fixed top-0 left-0 right-0 z-98 bg-white">
+    <nav class="fixed top-0 left-0 right-0 z-98 bg-white navnav">
       <div
-        class="max-[991px]:flex max-[991px]:justify-between max-[991px]:items-center max-[991px]:p-5 max-[991px]:bg-white max-[991px]:h-[68px] min-[768px]:h-[90px] max-[991px]:shadow-custom-shadow max-[991px]:z-98"
+        class="max-[991px]:flex max-[991px]:justify-between max-[991px]:items-center max-[991px]:p-5 max-[991px]:bg-white max-[991px]:h-[68px] min-[768px]:h-[90px] max-[991px]:shadow-custom-shadow max-[991px]:z-98 navnav2"
       >
         <!-----hamburger-->
-        <div class="hamburger fixed right-[20px z-101]">
+        <div class="hamburger fixed right-[20px] z-5001" id="hamburgerToggle">
           <div class="h-[3px] w-[25px] bg-dark-blue mb-1"></div>
           <div class="h-[3px] w-[25px] bg-dark-blue mb-1"></div>
           <div class="h-[3px] w-[25px] bg-dark-blue"></div>
         </div>
+
+        <!-----x-->
+        <!-- <div class="closeBtn fixed right-[20px] z-500 hidden">
+          <div class="h-[4px] w-[25px] bg-white rotate-45 translate-y-1"></div>
+          <div class="h-[4px] w-[25px] bg-white -rotate-45"></div>
+        </div> -->
 
         <header
           class="h-[68px] min-[768px]:h-[90px] bg-white shadow-custom-shadow flex items-center navbar relative z-1000"
@@ -702,21 +705,21 @@
         </header>
       </div>
     </nav>
+    <div
+      class="fixed inset-0 w-screen h-screen bg-black opacity-50 hidden overlay z-5000 ease-in-out delay-1000"
+    ></div>
 
     <main>
       <!---create an online portfolio section-->
       <div class="bg-dark-white">
         <div class="min-[768px]:pt-[90px]">
-          <div class="pt-10 pb-16 min-[768px]:pt-16 min-[768px]:pb-32">
+          <div class="pt-28 pb-16 min-[768px]:pt-10 min-[768px]:pb-16">
             <div
               class="grid grid-cols-6 grid-row-2 gap-5 px-5 py-10 min-[576px]:px-10 min-[576px]:gap-10 min-[992px]:grid-cols-12 max-w-[1600px] m-auto"
             >
-              <!---grid grid-cols-6 grid-row-2 gap-5 px-5 py-10 min-[576px]:px-10 min-[576px]:gap-10 min-[992px]:grid-cols-12 max-w-[1600px] m-auto-->
-              <!---text container-->
               <div
                 class="col-span-6 min-[768px]:max-[991px]:col-start-2 min-[1200px]:self-center max-w-[610px]"
               >
-                <!----col-span-6 min-[768px]:max-[991px]:col-start-2 min-[768px]:col-end-6 min-[1200px]:self-center max-w-[610px]-->
                 <h1
                   class="text-[32px] leading-[125%] pb-5 min-[768px]:text-[48px] min-[992px]:pb-7"
                 >
@@ -778,7 +781,7 @@
                   </ul>
                 </div>
                 <div
-                  class="flex flex-col justify-center w-full min-w-[250px] max-w-[380px]"
+                  class="flex flex-col justify-center w-full min-w-[250px] max-w-[340px]"
                 >
                   <button
                     class="bg-bright-blue p-3 border-2 border-solid border-bright-blue rounded min-[992px]:py-4 min-[992px]:px-5"
@@ -1152,7 +1155,7 @@
       </div>
 
       <!----carousel-->
-      <div class="bg-dark-white py-16 z-0">
+      <!-- <div class="bg-dark-white py-16 z-0">
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -1179,6 +1182,73 @@
 
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+        </div>
+      </div> -->
+
+      <!----carousel 2222222-->
+
+      <div class="bg-dark-white">
+        <div class="relative py-10">
+          <!-- Left arrow (optional) -->
+          <div
+            class="absolute left-[50px] top-[50%] -translate-y-[50%] h-[42px] w-[42px] bg-white rounded-full cursor-pointer z-10 flex items-center justify-center sliderBtnLeft"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+              class="h-[20px] w-[20px]"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M9.723 10l4.768-4.768-2.94-2.94L3.84 10l7.71 7.709 2.94-2.941L9.724 10z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <!-- Right arrow -->
+          <div
+            class="absolute right-[50px] top-[50%] -translate-y-[50%] h-[42px] w-[42px] bg-white rounded-full cursor-pointer z-10 rotate-180 flex items-center justify-center sliderBtnRight"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+              class="h-[20px] w-[20px]"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M9.723 10l4.768-4.768-2.94-2.94L3.84 10l7.71 7.709 2.94-2.941L9.724 10z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="slider overflow-clip">
+            <div class="slide">
+              <img src="/images/website-1.webp" alt="" />
+            </div>
+
+            <div class="slide">
+              <img src="/images/website-11.webp" alt="" />
+            </div>
+
+            <div class="slide">
+              <img src="/images/website-12.webp" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/images/dummy-website-4.webp" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/images/website-13.webp" alt="" />
+            </div>
+            <div class="slide">
+              <img src="/images/website-14.webp" alt="" />
+            </div>
+          </div>
+
+          <div class="dots"></div>
         </div>
       </div>
 
