@@ -914,8 +914,8 @@ video {
   align-self: center;
 }
 
-.overflow-clip {
-  overflow: clip;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .text-nowrap {
@@ -1247,11 +1247,6 @@ video {
   border-color: rgb(0 76 237 / var(--tw-border-opacity));
 }
 
-.hover\:bg-bright-blue:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 76 237 / var(--tw-bg-opacity));
-}
-
 .hover\:text-bright-blue:hover {
   --tw-text-opacity: 1;
   color: rgb(0 76 237 / var(--tw-text-opacity));
@@ -1346,6 +1341,16 @@ video {
 @media (max-width: 767px) {
   .max-\[767px\]\:flex-col {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .max-\[576px\]\:left-\[10px\] {
+    left: 10px;
+  }
+
+  .max-\[576px\]\:right-\[10px\] {
+    right: 10px;
   }
 }
 

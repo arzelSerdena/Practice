@@ -212,10 +212,38 @@ footer .toggleDiv.active svg {
 }
 
 .slide > img {
-  /* Only for images that have different size than slide */
   width: 700px;
   height: 500px;
   object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .slide > img {
+    width: 320px;
+    height: 230px;
+  }
+
+  .slide {
+    width: 320px;
+    height: 230px;
+  }
+
+  .slider {
+    height: 230px;
+    transform: translateX(-100px);
+  }
+}
+
+@media (max-width: 576px) {
+}
+.slider {
+  transform: translateX(-190px);
+}
+
+@media (max-width: 320px) {
+}
+.slider {
+  transform: translateX(-320px);
 }
 
 .dots {
@@ -238,7 +266,7 @@ footer .toggleDiv.active svg {
   transition: all 0.5s;
 }
 
-.dots__dot:nth-child(n + 7) {
+.dots__dot:last-child {
   display: none; /* Hides the 7th child and all subsequent children */
 }
 
