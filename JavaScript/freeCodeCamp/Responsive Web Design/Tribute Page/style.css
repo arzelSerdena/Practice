@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: max-content;
+  justify-content: center;
+}
+
+main {
+  max-width: 800px;
+  padding: 15px;
+  background: #eeeeee;
+  border-radius: 0.5em;
+}
+
+#img-div {
+  background: #fff;
+  padding: 10px;
+}
+
+figcaption {
+  text-align: center;
+  margin: 15px 0 5px;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  line-height: 0;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.timeline-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.timeline-container h3 {
+  text-align: center;
+  font-size: 1.25em;
+  margin: 50px 0;
+}
+
+li {
+  text-align: justify;
+  margin: 16px 0;
+}
+
+li span {
+  font-weight: bold;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+blockquote {
+  text-align: center;
+}
+
+cite {
+  margin-bottom: 50px;
+}
+
+.footer {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(23, 23, 23);
+}
